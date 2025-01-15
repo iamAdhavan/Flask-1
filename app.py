@@ -4,7 +4,7 @@ from pymongo import MongoClient
 
 
 app = Flask(__name__)
-CORS(app)  # Enable CORS for frontend-backend communication
+CORS(app,origins = ["https://adhavan2024.netlify.app"])  # Enable CORS for frontend-backend communication
 
 # MongoDB Connection
 MONGO_URL = "mongodb://localhost:27017"
