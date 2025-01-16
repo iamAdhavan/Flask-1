@@ -57,7 +57,7 @@ if __name__ == '__main__':
 #-----------This is for Login purpose ----------------------------------------#
 
 
-@app.route("/login", methods=["POST"])
+@app.route('/') # login", methods=["POST"]
 def login():
     # Parse request data
     data = request.json
