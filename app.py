@@ -14,7 +14,7 @@ db = client['Project']  # Replace with your database name
 users_collection = db['validation']  # Replace with your collection name
 
 
-@app.route('/')  # api/signup', methods=['POST']
+@app.route("/api/signup", methods=["POST"])  
 def signup():
     try:
         # Parse the request body
@@ -57,7 +57,7 @@ if __name__ == '__main__':
 #-----------This is for Login purpose ----------------------------------------#
 
 
-@app.route('/') # login", methods=["POST"]
+@app.route("/login", methods=["POST"]) # login", methods=["POST"]
 def login():
     # Parse request data
     data = request.json
