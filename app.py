@@ -8,7 +8,7 @@ app = Flask(__name__)
 CORS(app,origins = ["https://adhavan2024.netlify.app"])  # Enable CORS for frontend-backend communication
 
 # MongoDB Connection
-MONGO_URL = "mongodb://localhost:27017"
+MONGO_URL = os.getenv("mongodb://localhost:27017")
 client = MongoClient(MONGO_URL)
 db = client['Project']  # Replace with your database name
 users_collection = db['validation']  # Replace with your collection name
