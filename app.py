@@ -9,7 +9,7 @@ CORS(app,origins = ["https://adhavan2024.netlify.app"])  # Enable CORS for front
 
 # MongoDB Connection
 MONGO_URL = "mongodb://localhost:27017"
-client = MongoClient(MONGO_URL)
+client = os.getenv(MONGO_URL)
 db = client['Project']  # Replace with your database name
 users_collection = db['validation']  # Replace with your collection name
 
