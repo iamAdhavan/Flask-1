@@ -36,7 +36,8 @@ def signup():
         # Save user to MongoDB
         user = {'email': email, 'password': password}
         users_collection.insert_one(user)
-
+        response = jsonify({"message": "Login successful"})
+        response.headers['Content-Type'] = 'application/json'
         return jsonify({'message': 'User registered successfully'}), 201
 
     except Exception as e:
@@ -74,6 +75,8 @@ def login():
 
     # Validate password
     if user["password"] == password:
+        response = jsonify({"message": "Login successful"})
+        response.headers['Content-Type'] = 'application/json'
         return jsonify({"message": "Login successful"}), 200
     else:
         return jsonify({"error": "Invalid password"}), 401
