@@ -9,7 +9,7 @@ app = Flask(__name__)
 CORS(app)  # Enable CORS for frontend-backend communication
 
 # MongoDB Connection
-uri = f"mongodb+srv://havocadhavan05:{os.getenv('DB_PASSWORD')}@adhavan.dhlk2.mongodb.net/Project?retryWrites=true&w=majority&appName=Adhavan"
+uri = f"mongodb+srv://havocadhavan05:{os.getenv('Adhavan@2002')}@adhavan.dhlk2.mongodb.net/Project?retryWrites=true&w=majority&appName=Adhavan"
 client = MongoClient(uri, server_api=ServerApi('1'))
 db = client['Project']  # Replace with your database name
 users_collection = db['validation']  # Replace with your collection name
